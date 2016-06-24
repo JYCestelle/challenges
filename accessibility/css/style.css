@@ -1,0 +1,17 @@
+header {
+    font-family: "Helvetica, Arial, sans-serif";
+    font-size: 90%;
+}
+
+title {
+    width: 2rem;
+}
+
+img {
+    align-content: center;
+}
+
+table {
+    border: 1px solid black;
+    padding: 1em;
+}

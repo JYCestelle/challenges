@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="YOUR NAME HERE">
+
+  <title>Twitter's Sentiment</title>
+  
+  <!-- bootstrap for styling -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+  <!-- font-awesome for icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <!-- sample tweet and sentiment data (hard-included) -->
+  <script src="data/tweets.js"></script>
+  <script src="data/sentiments-ucb.js"></script>
+</head>
+
+<body class="container">
+
+  <h1><i class="fa fa-twitter"></i> Twitter's Sentiment</h1>
+
+  <div class="searchBar">
+    <input id="searchBox" name="query" placeholder="Search for tweets...">
+    <button id="searchButton"><i class="fa fa-search" aria-label="search"></i></button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="col-md-2">Name</th>
+          <th class="col-md-2">Date</th>
+          <th class="col-md-5">Tweet</th>
+          <th class="col-md-2">Hashtags</th>
+          <th class="col-md-1">Retweets</th>
+          <th class="col-md-1">Sentiment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--Table content will go here-->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LOAD YOUR SCRIPT HERE! -->
+
+</body>
+</html>

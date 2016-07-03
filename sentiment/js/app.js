@@ -36,19 +36,20 @@ function parseTweets(data){
         return hashtag;
     }
     
+    console.log(data);
     data.statuses.forEach(function(point) {
         var returned = {
             'id' : point.id,
             'created_at' : point.created_at,
             'screen_name' : point.user.screen_name,
             'text' : point.text,
-            'hashtags' : getHash(point.entities.hashtags),
+            'hashtags' : getHash(point.entities.hashtags).join('#'),
             'retweet_count' : point.retweet_count,
             'sentiment_score': sentimentCalc(point.text)
         };
         tweets.push(returned);
     });
-
+    console.log(tweets);
     return tweets;
 };
 
@@ -69,6 +70,7 @@ function sentimentCalc(sentiment){
             s+= _SENTIMENTS[input.toLowerCase()];
             }
     });
+    console.log(s);
     return s;
 };
 
@@ -88,6 +90,7 @@ You can test that this works by calling your showTweets() method and passing it 
 function showTweets(toPrint){
     //call sort function 
     sortSent(toPrint);
+    
     [].slice.call(toPrint).forEach(function(datapoint){
         var start = $('<tr></tr>');
         start.append($('<td>' + toPrint.screen_name + '</td>'));

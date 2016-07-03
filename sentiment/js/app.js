@@ -44,7 +44,7 @@ function parseTweets(data){
             'text' : point.text,
             'hashtags' : getHash(point.entities.hashtags),
             'retweet_count' : point.retweet_count,
-            'sentiment_score': getSentimentScore(point.text)
+            'sentiment_score': findScore(point.text)
         };
         tweets.push(returned);
     });
@@ -60,7 +60,7 @@ data/sentiments-ucb.js
 For each tweet, should take the calculated sentiment (e.g., the result of sentimentOf()) and assign it as a new property to the tweet object you created in Step 1, thereby giving that tweet a sentiment score that can be used later!
 */
 
-function getSentimentScore(sentiment){
+function findScore(sentiment){
     //split
     var splitted = sentiment.split(/[^\w']/);
     var s = 0;
@@ -73,7 +73,7 @@ function getSentimentScore(sentiment){
 };
 
 //use function to sort through and compare? 
-function sortBySentiment(toSort){
+function sentimentOf(toSort){
     [].slice.call(toSort).sort(function(first, second){
         return first.sentiment_score - second.sentiment_score;
     });
@@ -87,7 +87,7 @@ You can test that this works by calling your showTweets() method and passing it 
 
 function showTweets(toPrint){
     //call sort function 
-    sortBySentiment(toPrint);
+    sentimentOf(toPrint);
     [].slice.call(toPrint).forEach(function(datapoint){
         var start = $('<tr></tr>');
         start.append($('<td>' + toPrint.screen_name + '</td>'));

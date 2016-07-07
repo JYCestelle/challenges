@@ -17,7 +17,7 @@ var parseTweets = function(inputJSON){
     for(var filterItem in filterArray){
         console.log(parsedJSON[i][filterArray[filterItem]])
     }
-    }
+    }dsfsd
 }
 
 });*/

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="William L Heston">
+
+  <title>Memory Game</title>
+  
+  <!-- bootstrap for styling -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+  <!-- font-awesome for icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
+    
+</head>
+
+<body class="container">
+    <button id="start" type="button" class="btn btn-success">Start!</button>
+    <div id="timer" class="badge">0</div> <p id="rem">Matches Remaining : </p>
+    <p>To clear after an incorrect match click any other panel</p>
+
+    <div class="table-responsive text-center">
+      <table id="table", role="grid">
+       
+      </table>
+    </div>
+
+    
+
+
+
+<!-- LOAD YOUR SCRIPT HERE! -->
+  <script src="js/cards.js"></script>
+  <script src="js/file.js"></script>
+  <link rel="stylesheet" href="css/file.css">
+
+<!--Modal stuff!-->
+<!-- Trigger the modal with a button -->
+<div id= "win" class="modal fade" table-index = -1 role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">The game is over</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Wow congrats you did it!</p>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+  
+  
+
+</body>
+</html>

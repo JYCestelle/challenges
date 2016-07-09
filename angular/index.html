@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bridge">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fremont Bridge</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/script.css"
+	<!-- load our script -->
+	<!-- load Angular -->
+	<meta charset="utf-8">  <!-- it's important for d3.js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/d3/d3.js"></script>
+	<script src="bower_components/nvd3/nv.d3.js"></script> <!-- or use another assembly -->
+	<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+	<link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="js/script.js"></script>
+    
+</head>
+<body class="container" ng-controller="bridgeCtrl">
+
+	<h1>Fremont Bridge hourly Bike Traffic</h1>
+	<p class="lead">Fremont Bridge traffic per hour starting in 2012 including the differences per direction</p>
+
+	
+  <form role="form" class="form-inline">
+    <button type="button"><i class="fa fa-search" aria-label="Search"></i></button>
+    <input type="text" name="search" id="searchTerm" placeholder="Search data bellow" ng-model="searchTerm">
+  </form>
+
+	<table class="table">
+		<tr>
+			<th ng-click="date" scope="col">Date</th>
+			<th ng-click="sortBy('fremont_bridge_nb')">Traffic North Bond</th>
+			<th ng-click="sortBy('fremont_bridge_sb')">Traffic South Bound</th>
+			<th>Difference</th>
+		</tr>
+		<tr ng-repeat="bridges in times | orderBy: ordering | filter:searchTerm">
+			<td >{{bridges.date | date:'short'}}</td>
+			<td>{{bridges.fremont_bridge_nb}}</td>
+			<td>{{bridges.fremont_bridge_sb}}</td>
+			<td>{{(bridges.fremont_bridge_sb - bridges.fremont_bridge_nb)| number:0}}</td>
+	</table>
+
+</body>
+</html>

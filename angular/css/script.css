@@ -1,0 +1,34 @@
+img, p, form {
+	padding-bottom: 1em;
+
+}
+
+.big {
+	font-size: larger;
+}
+
+.purple {
+	color: rebeccapurple;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+
+/* fix for bootstrap form-horizontal */
+.form-horizontal .form-group {
+    width:100%;
+}
+
+html {
+	background-image: url('http://static.panoramio.com/photos/original/23096756.jpg');
+}
+
+table {
+	background-color: lightgreen;
+}
+

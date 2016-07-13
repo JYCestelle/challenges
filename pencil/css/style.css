@@ -1,206 +1,229 @@
-/* Your CSS rules go here */
-
-/*all sections */
-
-
-
-
-
-/*All headings */
-
-#tagline {
-    max-width: 75%;
-    font-weight: 100;
+body {
+    background-color: #f1f2f5;
+    font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif";
+    font-family: Source Sans Pro, Helvetica Neue, Helvatica, Arial, sans-serif;
     font-weight: 200;
-    padding: 3em;
 }
 
-#pencil{
-    height: 1em;
-    font-size: 1.5rem;
-}
-
-#menu {
+nav {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 100%;
-    z-index: -1;
-    background-color: rgb(18,8,20);
-    color: white;
-    padding-top: .5em;
-    padding-bottom: .5em;
+    right:0px;
+    z-index: 1;
+    background-color: rgb(18, 18, 20);
+}
+
+#menu {
     padding-left: 2em;
     padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0;    
+}
+
+li a{
     font-size: 16px;
+    color: white;
     font-variant: small-caps;
     text-decoration: none;
 }
-nav:hover {
-    text-decoration: none;
+
+li a:focus, li a:hover {
     color: #f08B06;
+    text-decoration: none;
 }
 
-
-@media screen and (max-width: 768px) {
-    #menu {
-        background-color: rgba(18,18,20,0.8);
-    }
-    
+#pencili {
+    height: 1em;
+    fill: white;
 }
 
-@media screen and (max-width: 768px){
-    header {
-        background-image: url("file:///Users/loomisheston/Documents/INFO%20343/hw2/challenges/pencil/img/pencil-header-xs.jpg");
-    }
-    #tagline {
-        font-size: 1.5rem;
-    }
-    .container#add{
-        background-image: url("../img/colors-background-sm.jpg")
-    }
-    #panda{
-        position: absolute;
-        text-align: center;
-    }
-
+#pencili:hover, #pencili:focus {
+    fill: #f08B06;
 }
 
-@media screen and (max-width: 992px) and (min-width: 768px){
-    header {
-        background-image: url("file:///Users/loomisheston/Documents/INFO%20343/hw2/challenges/pencil/img/pencil-header-sm.jpg");
-    }
-    #tagline {
-        font-size: 1.5rem;
-    }
-    .container#add{
-        background-image: url("../img/colors-background-md.jpg")
-    }
-    #history.h2{
-        font-size: 3em;
-    }
-    #panda{
-        position: absolute;
-        text-align: center;
-    }
-    #creative{
-        font-size: 2.5rem;
-    }
-
+header {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/pencil-header-xs.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
 }
 
-@media screen and (max-width: 1200) and (min-width: 992){
-    header {
-        background-image: url("file:///Users/loomisheston/Documents/INFO%20343/hw2/challenges/pencil/img/pencil-header-md.jpg");
-    }
-    #tagline {
-        font-size: 1.5rem;
-    }
-    .container#add{
-        background-image: url("../img/colors-background-md.jpg")
-    }
-    #history.h2{
-        font-size: 3em;
-    }
-    #panda{
-        text-align: left;
-    }
-    #creative{
-        font-size: 2.5rem;
-    }
+#pencil {
+    font-size: 4rem;
 }
 
-@media screen and (min-width: 1200px){
-    header {
-        background-image: url("file:///Users/loomisheston/Documents/INFO%20343/hw2/challenges/pencil/img/pencil-header-lg.jpg");
-    }
-    #tagline {
-        font-size: 1.5rem;
-    }
-    .container#add{
-        background-image: url("../img/colors-background-lg.jpg")
-    }
-    #history.h2{
-        font-size: 3em;
-    }
-    #panda{
-        text-align: left;
-    }
-    #creative{
-        font-size: 2.5rem;
-    }
+#tagline {
+    font-weight: 100;
+    max-width: 50%;
 }
 
-#test {
-    background-color: #f1f2f5;
+q {
+    display: block;
     font-size: 1.5rem;
-    padding-bottom: 1em;
     font-style: italic;
+    padding-bottom: 1em;
 }
 
-#features{
+#features {
     background-color: #e0deda;
-    /*width:50px;*/
-
 }
 
-.row {
-    width: 50px;
-    fill: #5a3822;
-}
-
-#plight, #psharp, #perase, #pink{
+#ink, #eraser, #sharpener, #effect {
     font-size: 14px;
 }
-/*
-@media screen and (min-width:1200px){
-    .container-fluid{
-        
-    }
-}*/
 
-#features.svg{
+#ink svg, #eraser svg, #sharpener svg, #effect svg {
     width: 50px;
     fill: #5a3822;
 }
 
-#add.h1{
-    font-size: 3em;
-    width: 50%
+#Adtext {
+    font-size: 3rem;
+    max-width: 50%;
 }
 
-#history{
-    background: #f1f2f5;
-}
-#history.h2{
-    font-size: 2em;
-}
-body {
-    background-color: #f1f2f5;
-    font-family: "Roboto, Helvetica Neue, Helvetica, Arial, sans-serif";
-    font-size: 18px;
-    font-weight: 300;
-    padding: 10px 0 0 0;
-    
+#historyH, #potential {
+    font-size: 2rem;
 }
 
-#WS {
+#workshop {
     background-color: #e0deda;
-
 }
 
-#worktext{
-    font-weight: 100;
+img {
+    border-radius: 8px;
 }
 
-.footer{
-    background-color: #f1f2f5;
-    border-top: 3px #583820;
+header, main, section, footer {
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
-#foot{
-    font-size: 2em;
+
+footer {
+    border-top: 3px solid #583820;
+    font-size: 12px;
+}
+
+#foot a {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    header {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/pencil-header-sm.jpg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    #tagline {
+        font-size: 1.5rem;
+    }
+
+    #add {
+        background-image: url("../img/colors-background-sm.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+
+    #history1 {
+        font-size: 3rem;
+    }
+    
+    #workshop {
+        text-align: left;
+    }
+
+    #potential {
+        font-size: 2.5rem;
+    }
+
+    #foot {
+        float: right;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    header {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/pencil-header-md.jpg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    #tagline {
+        font-size: 1.5rem;
+    }
+
+    #add {
+        background-image: url("../img/colors-background-md.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+
+    #history1 {
+        font-size: 3rem;
+    }
+
+    #workshop {
+        text-align: left;
+    }
+
+    #potential {
+        font-size: 2.5rem;
+    }
+
+    #foot {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/pencil-header-lg.jpg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    #tagline {
+        font-size: 1.5rem;
+    }
+
+    #add {
+        background-image: url("../img/colors-background-lg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+
+    #history1 {
+        font-size: 3rem
+    }
+
+    #workshop {
+        text-align: left;
+    }
+
+    #potential {
+        font-size: 2.5rem;
+    }
+
+    #foot {
+        float: right;
+    }
 }

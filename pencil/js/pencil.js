@@ -56,7 +56,7 @@ myApp.controller('cartCtrl', ['$scope', '$http', '$window', 'ShoppingCartService
 	$scope.killall = function(){
 		localStorage.clear();
 		$scope.greeting = 'Thank You Order has been placed!';
-        window.alert('Thank You Order has been placed!');
+        window.alert('Thank You Order has been placed! Please refresh the page');
 	  
 	}
 

@@ -1,0 +1,48 @@
+<main class="container">
+    <h1> Cart</h1>
+    <div ng-controller="DetailsCtrl" ng-model="total">
+
+        <h2>{{pencil.name}} <small>({{pencil.description}})</small></h2>
+
+        <div class="imageHolder" ng-init="getImgUrl()">
+            <img ng-src="{{pencil.image}}" />
+        </div>
+
+
+        <form name="colorSelect">
+            <label for="singleSelect"> Select color desired :  </label><br>
+            <select name="singleSelect" ng-model="singleSelect">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="purple">Purple</option>
+    </select><br>
+  
+       
+        <p></p>
+    
+
+    
+    <label for="amountSelect"> Select amount : </label><br>
+    <select name="amountSelect" ng-model="amountSelect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10Sel">10</option>
+    </select><br>
+    <p></p>
+    <input type="submit" id="submit" value="Submit" ng-click="saveCart(total)" ui-sref="cart">
+    </form>
+    </div>
+    
+
+    
+
+</main>

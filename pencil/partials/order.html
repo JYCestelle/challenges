@@ -1,0 +1,25 @@
+	<header class="container">
+		<h1>Pencils for sale!</h1>
+		<p class="lead">all the best!</p>
+	</header>
+
+  <main class="container" role="main">
+		<form role="form" class="form-inline">
+			<label for="searchTerm"><i class="fa fa-search" aria-label="Search"></i></label>
+			<input type="text" name="search" id="searchTerm" placeholder="Enter a search term..." ng-model="searchTerm">
+		</form>
+
+		<table class="table">
+			<tr>
+				<th><a href="" ng-click="ordering='name'">Name</a></th>
+				<th><a href="" ng-click="ordering='tagline'">Tagline</a></th>
+				<th><a href="" ng-click="ordering='price'">Price</a></th>
+
+			</tr>
+			<tr ng-repeat="pencil in pencils | orderBy:ordering | filter:searchTerm ">
+				<td><a ui-sref="pencil-id( {'pencil1':pencil.id} )">{{pencil.name}}</a></td>
+				<td>{{pencil.tagline}}</td>
+				<td>{{pencil.price | currency:'$':0}}</td>
+                <!--filler for link to details section-->
+		</table>
+	</main>

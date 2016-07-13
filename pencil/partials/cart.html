@@ -1,0 +1,27 @@
+	<header class="container">
+		<h1>Pencils for sale!</h1>
+		<p class="lead">all the best!</p>
+	</header>
+
+  <main class="container" role="main">
+		<form role="form" class="form-inline">
+			<label for="searchTerm"><i class="fa fa-search" aria-label="Search"></i></label>
+			<input type="text" name="search" id="searchTerm" placeholder="Enter a search term..." ng-model="searchTerm">
+		</form>
+        <input type="button" value="Place Order" class="btn btn-primary" ng-click="killall()"/>
+		<table class="table">
+			<tr>
+				<th><a href="" ng-click="ordering='ID'">ID</a></th>
+				<th><a href="" ng-click="ordering='Amount'">Amount</a></th>
+				<th><a href="" ng-click="ordering='Color'">Color</a></th>
+                <th><a href="">SubTotal</a></th>
+			</tr>
+			<tr ng-repeat="item in items | orderBy:ordering | filter:searchTerm ">
+				<td><a>{{item.id}}</a></td>
+				<td>{{item.amount}}</td>
+				<td>{{item.color}}</td>
+                <td>{{(item.amount * item.price)| number:0 | currency:'$':0}}</td>
+                <td><input class="delete pull-right" type="button" value="Remove" for="{{items}}" ng-click="kill($index)"/></td>
+
+		</table>
+	</main>

@@ -21,7 +21,7 @@
 				<td>{{item.amount}}</td>
 				<td>{{item.color}}</td>
                 <td>{{(item.amount * item.price)| number:0 | currency:'$':0}}</td>
-                <td><input class="delete pull-right" type="button" value="Remove" for="{{items}}" ng-click="kill($index)"/></td>
+                <td><input ui-sref="home" class="delete pull-right" type="button" value="Remove" for="{{items}}" ng-click="kill($index)"/></td>
 
 		</table>
 	</main>
